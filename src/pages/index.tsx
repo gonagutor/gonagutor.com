@@ -11,7 +11,7 @@ const IndexPage = () => (
   }}
   >
     <Head>
-      <title>My page title</title>
+      <title>Gonagutor - Developer</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <h1>Website under construction</h1>
