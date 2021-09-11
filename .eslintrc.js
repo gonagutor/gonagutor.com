@@ -26,5 +26,15 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': [0],
     'react/no-unescaped-entities': [0],
     'no-use-before-define': [0],
+    'jsx-a11y/label-has-associated-control': ['error', {
+      required: {
+        some: ['nesting', 'id'],
+      },
+    }],
+    'jsx-a11y/label-has-for': ['error', {
+      required: {
+        some: ['nesting', 'id'],
+      },
+    }],
   },
 };
