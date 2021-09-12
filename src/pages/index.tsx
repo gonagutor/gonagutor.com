@@ -8,17 +8,23 @@ import ArrowSVG from '../components/ArrowSVG';
 import ResponsiveNavbar from '../components/NavBars/ResponsiveNavbar';
 
 const IndexPage = () => {
-  const [textClasses, setTextClasses] = useState('aboutMeTextBox');
+  const [aboutMeClasses, setAboutMeClasses] = useState('aboutMeTextBox');
+  const [teachStackClasses, setTeachStackClasses] = useState('techstackTextContainer');
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const myTechstackRef = useRef<HTMLDivElement>(null);
   const myProjectsRef = useRef<HTMLDivElement>(null);
   const contactMeRef = useRef<HTMLDivElement>(null);
 
-  const changeClassToActive = () => ((aboutMeRef.current) && window.scrollY >= aboutMeRef.current.getBoundingClientRect().top && textClasses === 'aboutMeTextBox') && setTextClasses('aboutMeTextBox enter');
+  const changeClassAboutMeToActive = () => ((aboutMeRef.current) && window.scrollY >= aboutMeRef.current.getBoundingClientRect().top && aboutMeClasses === 'aboutMeTextBox') && setAboutMeClasses('aboutMeTextBox enter');
+  const changeClassTechStackToActive = () => ((myTechstackRef.current) && window.scrollY >= myTechstackRef.current.getBoundingClientRect().top && teachStackClasses === 'techstackTextContainer') && setTeachStackClasses('techstackTextContainer enter');
   useEffect(() => {
-    window.addEventListener('scroll', changeClassToActive);
-    return () => window.removeEventListener('scroll', changeClassToActive);
+    window.addEventListener('scroll', changeClassAboutMeToActive);
+    window.addEventListener('scroll', changeClassTechStackToActive);
+    return () => {
+      window.removeEventListener('scroll', changeClassAboutMeToActive);
+      window.removeEventListener('scroll', changeClassTechStackToActive);
+    };
   });
 
   const loopingTypewriter = (ref: TypewriterClass) => {
@@ -128,9 +134,9 @@ const IndexPage = () => {
       </div>
       <div className="main aboutMe" ref={aboutMeRef}>
         <div id="aboutMeBG" />
-        <div className={textClasses}>
+        <div className={aboutMeClasses}>
           <h1>About Me</h1>
-          <div style={{ fontFamily: 'Open Sans', fontWeight: 'lighter' }}>
+          <div style={{ fontFamily: 'Open Sans', fontWeight: 'normal' }}>
             <p>
               I'm a developer with a passion for anything related to programming.
             </p>
@@ -156,9 +162,34 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-      <div className="main" ref={myTechstackRef}>
-        <h1>Website under construction</h1>
-        <h2>Come back soon to see something cool!</h2>
+      <div className="main myTechstack" ref={myTechstackRef}>
+        <div id="techstackBG" />
+        <div className={teachStackClasses}>
+          <h1 className="techstackText bold">My Techstack</h1>
+          <div style={{ fontFamily: '"Open Sans", sans-serif', fontWeight: 'normal' }}>
+            <p>
+              My approach for a project usually is to research which technology is best for the
+              situation.
+            </p>
+            <p>
+              I mostly do not care whether I have used the framework, languages,
+              or server architecture before.
+            </p>
+            <p>
+              Because of this I have used a lot of current technologies, and because I
+              always do big complete projects I am also very proficient with them
+            </p>
+            <h4>Languages I use:</h4>
+            <p>JavaScript, TypeScript, Dart, CSS, HTML, PHP, SQL, C, C#, Java & Python</p>
+            <h4>Frameworks I know:</h4>
+            <p>Vue, React, Angular, Express, Symphony & Flutter</p>
+            <h4>Other useful thinks I know:</h4>
+            <p>
+              Git, MongoDB, PostgreSQL, Apache, Nginx, Node.js,
+              VSCode, Figma, SASS, REST, Docker, ES6 & ES5
+            </p>
+          </div>
+        </div>
       </div>
       <div className="main" ref={myProjectsRef}>
         <h1>Website under construction</h1>
