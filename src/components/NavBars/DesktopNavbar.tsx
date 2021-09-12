@@ -27,7 +27,6 @@ const NavButtons = (props: DesktopNavbarProps) => {
     if (y - (height / 2) < 0 && Math.abs(y) < height / 2) { return true; }
     return false;
   };
-
   useEffect(() => {
     window.addEventListener('scroll', setScrollState);
     return () => window.removeEventListener('scroll', setScrollState);
@@ -44,7 +43,7 @@ const NavButtons = (props: DesktopNavbarProps) => {
       <label className="navButtonLabel" htmlFor="home">
         <button
           type="button"
-          className={`navButton${(shouldBeActive(homeRef)) ? ' isCurrentPage' : ''}`}
+          className={`navButton${(shouldBeActive(homeRef) || !homeRef.current) ? ' isCurrentPage' : ''}`}
           id="home"
           onClick={() => (homeRef.current) && homeRef.current.scrollIntoView({ behavior: 'smooth' })}
         >

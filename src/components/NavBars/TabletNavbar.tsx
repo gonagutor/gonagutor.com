@@ -44,7 +44,7 @@ const NavButtons = (props: TabletNavbarProps) => {
       <label className="navButtonLabel" htmlFor="home">
         <button
           type="button"
-          className={`navButtonTablet${(shouldBeActive(homeRef)) ? ' isCurrentPage' : ''}`}
+          className={`navButtonTablet${(shouldBeActive(homeRef) || !homeRef.current) ? ' isCurrentPage' : ''}`}
           id="home"
           onClick={() => (homeRef.current) && homeRef.current.scrollIntoView({ behavior: 'smooth' })}
         >

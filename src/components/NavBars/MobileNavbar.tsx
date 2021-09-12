@@ -55,7 +55,7 @@ const NavButtons = (props: NavButtonProps) => {
       <label className="navButtonLabel" htmlFor="home">
         <button
           type="button"
-          className={`navButtonMobile${(shouldBeActive(homeRef)) ? ' isCurrentPage' : ''}`}
+          className={`navButtonMobile${(shouldBeActive(homeRef) || !homeRef.current) ? ' isCurrentPage' : ''}`}
           id="home"
           onClick={() => {
             if (homeRef.current) { homeRef.current.scrollIntoView({ behavior: 'smooth' }); }
