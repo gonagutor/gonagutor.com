@@ -5,7 +5,7 @@ import Typewriter, { TypewriterClass } from 'typewriter-effect';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import MeImage from '../assets/me.png';
 import ArrowSVG from '../components/ArrowSVG';
-import DesktopNavbar from '../components/NavBars/DesktopNavbar';
+import ResponsiveNavbar from '../components/NavBars/ResponsiveNavbar';
 
 const IndexPage = () => {
   const [textClasses, setTextClasses] = useState('aboutMeTextBox');
@@ -16,15 +16,9 @@ const IndexPage = () => {
   const contactMeRef = useRef<HTMLDivElement>(null);
 
   const changeClassToActive = () => ((aboutMeRef.current) && window.scrollY >= aboutMeRef.current.getBoundingClientRect().top && textClasses === 'aboutMeTextBox') && setTextClasses('aboutMeTextBox enter');
-
   useEffect(() => {
-    function watchScroll() {
-      window.addEventListener('scroll', changeClassToActive);
-    }
-    watchScroll();
-    return () => {
-      window.removeEventListener('scroll', changeClassToActive);
-    };
+    window.addEventListener('scroll', changeClassToActive);
+    return () => window.removeEventListener('scroll', changeClassToActive);
   });
 
   const loopingTypewriter = (ref: TypewriterClass) => {
@@ -91,7 +85,7 @@ const IndexPage = () => {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet" />
       </Head>
-      <DesktopNavbar
+      <ResponsiveNavbar
         homeRef={homeRef}
         aboutMeRef={aboutMeRef}
         myTechstackRef={myTechstackRef}

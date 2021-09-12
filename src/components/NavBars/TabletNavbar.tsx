@@ -44,51 +44,51 @@ const NavButtons = (props: TabletNavbarProps) => {
       <label className="navButtonLabel" htmlFor="home">
         <button
           type="button"
-          className={`navButton${(shouldBeActive(homeRef)) ? ' isCurrentPage' : ''}`}
+          className={`navButtonTablet${(shouldBeActive(homeRef)) ? ' isCurrentPage' : ''}`}
           id="home"
           onClick={() => (homeRef.current) && homeRef.current.scrollIntoView({ behavior: 'smooth' })}
         >
-          <b>Home</b>
+          <a>&#199;</a>
         </button>
       </label>
       <label className="navButtonLabel" htmlFor="aboutMe">
         <button
           type="button"
-          className={`navButton${(shouldBeActive(aboutMeRef)) ? ' isCurrentPage' : ''}`}
+          className={`navButtonTablet${(shouldBeActive(aboutMeRef)) ? ' isCurrentPage' : ''}`}
           id="aboutMe"
           onClick={() => (aboutMeRef.current) && aboutMeRef.current.scrollIntoView({ behavior: 'smooth' })}
         >
-          <b>About Me</b>
+          <a>&#80;</a>
         </button>
       </label>
       <label className="navButtonLabel" htmlFor="myTechstack">
         <button
           type="button"
-          className={`navButton${(shouldBeActive(myTechstackRef)) ? ' isCurrentPage' : ''}`}
+          className={`navButtonTablet${(shouldBeActive(myTechstackRef)) ? ' isCurrentPage' : ''}`}
           id="myTechstack"
           onClick={() => (myTechstackRef.current) && myTechstackRef.current.scrollIntoView({ behavior: 'smooth' })}
         >
-          <b>My Techstack</b>
+          <a style={{ transform: 'translateY(3px)' }}>&#72;</a>
         </button>
       </label>
       <label className="navButtonLabel" htmlFor="myProjects">
         <button
           type="button"
-          className={`navButton${(shouldBeActive(myProjectsRef)) ? ' isCurrentPage' : ''}`}
+          className={`navButtonTablet${(shouldBeActive(myProjectsRef)) ? ' isCurrentPage' : ''}`}
           id="myProjects"
           onClick={() => (myProjectsRef.current) && myProjectsRef.current.scrollIntoView({ behavior: 'smooth' })}
         >
-          <b>My projects</b>
+          <a style={{ transform: 'translateY(3px)' }}>&#69;</a>
         </button>
       </label>
       <label className="navButtonLabel" htmlFor="contactMe">
         <button
           type="button"
-          className={`navButton${(shouldBeActive(contactMeRef)) ? ' isCurrentPage' : ''}`}
+          className={`navButtonTablet${(shouldBeActive(contactMeRef)) ? ' isCurrentPage' : ''}`}
           id="contactMe"
           onClick={() => (contactMeRef.current) && contactMeRef.current.scrollIntoView({ behavior: 'smooth' })}
         >
-          <b>Contact Me</b>
+          <a style={{ transform: 'translateY(3px)' }}>&#109;</a>
         </button>
       </label>
     </div>
@@ -96,27 +96,37 @@ const NavButtons = (props: TabletNavbarProps) => {
   );
 };
 
-const ExternalLinks = () => (
-  <div className="aditionalNavButtonContainer">
-    <label htmlFor="instagram">
-      <button type="button" id="instagram" className="aditionalNavButton" onClick={() => { window.location.href = 'https://www.instagram.com/gonzalo.gif/'; }}>
-        <FontAwesomeIcon icon={faInstagram} className="navBarDesktopIcons" />
-      </button>
-    </label>
-    <label htmlFor="email">
-      <button type="button" id="email" className="aditionalNavButton" onClick={() => { window.location.href = 'mailto:gonagutor@gmail.com'; }}>
-        <FontAwesomeIcon icon={faEnvelopeOpen} className="navBarDesktopIcons" />
-      </button>
-    </label>
-    <label htmlFor="github">
-      <button type="button" id="github" className="aditionalNavButton" onClick={() => { window.location.href = 'https://github.com/gonagutor'; }}>
-        <FontAwesomeIcon icon={faGithub} className="navBarDesktopIcons" />
-      </button>
-    </label>
-  </div>
-);
+const ExternalLinks = () => {
+  const [deployableClass, setDeployableClass] = useState('aditionalNavButtonTabletContainer');
+  return (
+    <div>
+      <label htmlFor="plus">
+        <button type="button" id="plus" className="controllerButton" onClick={() => setDeployableClass((deployableClass === 'aditionalNavButtonTabletContainer') ? 'aditionalNavButtonTabletContainer active' : 'aditionalNavButtonTabletContainer')}>
+          <a style={{ transform: 'scaleY(1.03)' }}>&#89;</a>
+        </button>
+      </label>
+      <div className={deployableClass}>
+        <label htmlFor="instagram">
+          <button type="button" id="instagram" className="aditionalNavButtonTablet" onClick={() => { window.location.href = 'https://www.instagram.com/gonzalo.gif/'; }}>
+            <FontAwesomeIcon icon={faInstagram} className="navBarDesktopIcons" />
+          </button>
+        </label>
+        <label htmlFor="email">
+          <button type="button" id="email" className="aditionalNavButtonTablet" onClick={() => { window.location.href = 'mailto:gonagutor@gmail.com'; }}>
+            <FontAwesomeIcon icon={faEnvelopeOpen} className="navBarDesktopIcons" />
+          </button>
+        </label>
+        <label htmlFor="github">
+          <button type="button" id="github" className="aditionalNavButtonTablet" onClick={() => { window.location.href = 'https://github.com/gonagutor'; }}>
+            <FontAwesomeIcon icon={faGithub} className="navBarDesktopIcons" />
+          </button>
+        </label>
+      </div>
+    </div>
+  );
+};
 
-const DesktopNavbar = (props: TabletNavbarProps) => {
+const TabletNavbar = (props: TabletNavbarProps) => {
   const {
     homeRef,
     aboutMeRef,
@@ -142,4 +152,4 @@ const DesktopNavbar = (props: TabletNavbarProps) => {
   );
 };
 
-export default DesktopNavbar;
+export default TabletNavbar;
