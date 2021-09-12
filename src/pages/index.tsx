@@ -6,6 +6,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import MeImage from '../assets/me.png';
 import ArrowSVG from '../components/ArrowSVG';
 import ResponsiveNavbar from '../components/NavBars/ResponsiveNavbar';
+import TechstackList from '../components/TechstackList';
 
 const IndexPage = () => {
   const [textClasses, setTextClasses] = useState('aboutMeTextBox');
@@ -156,9 +157,23 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-      <div className="main" ref={myTechstackRef}>
-        <h1>Website under construction</h1>
-        <h2>Come back soon to see something cool!</h2>
+      <div className="main myTechstack" ref={myTechstackRef}>
+        <div className="techstackTextContainer">
+          <h1 className="techstackText bold">My Techstack</h1>
+          <p className="techstackText regular">
+            My approach for a project usually is to research which technology is best for the
+            situation.
+          </p>
+          <p className="techstackText regular">
+            I mostly do not care whether I have used the framework, languages,
+            or server architecture before.
+          </p>
+          <p className="techstackText regular">
+            Because of this I have used a lot of current technologies, and because I
+            always do big complete projects I am also very proficient with them
+          </p>
+        </div>
+        <TechstackList />
       </div>
       <div className="main" ref={myProjectsRef}>
         <h1>Website under construction</h1>

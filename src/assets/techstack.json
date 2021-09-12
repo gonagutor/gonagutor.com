@@ -1,0 +1,88 @@
+{
+	"techstack": [
+		{
+			"title": "HTML",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		},
+		{
+			"title": "CSS",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		},
+		{
+			"title": "React",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		},
+		{
+			"title": "Vue",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		},
+		{
+			"title": "Angular",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		},
+		{
+			"title": "SQL",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		},
+		{
+			"title": "Firebase",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		},
+		{
+			"title": "MongoDB",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		},
+		{
+			"title": "Express",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		},
+		{
+			"title": "NodeJS",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		},
+		{
+			"title": "Apache",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		},
+		{
+			"title": "PHP",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		},
+		{
+			"title": "Flutter",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		},
+		{
+			"title": "Java Native",
+			"desc": "I've made plenty of Web Apps using react. This website is built with React, Typescript and Next.js!",
+			"url": "/images/techstackLogos/react.png",
+			"urlalt": "React Logo"
+		}
+	]
+}
