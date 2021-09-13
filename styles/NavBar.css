@@ -383,3 +383,8 @@
   flex-direction: row;
   align-items: center;
 }
+
+/** My Projects **/
+.main.myProjects {
+  flex-direction: column;
+}

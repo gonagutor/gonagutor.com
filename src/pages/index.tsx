@@ -6,6 +6,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import MeImage from '../assets/me.png';
 import ArrowSVG from '../components/ArrowSVG';
 import ResponsiveNavbar from '../components/NavBars/ResponsiveNavbar';
+import ProjectList from '../components/ProjectList';
 
 const IndexPage = () => {
   const [aboutMeClasses, setAboutMeClasses] = useState('aboutMeTextBox');
@@ -191,13 +192,43 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-      <div className="main" ref={myProjectsRef}>
-        <h1>Website under construction</h1>
-        <h2>Come back soon to see something cool!</h2>
-      </div>
-      <div className="main" ref={contactMeRef}>
-        <h1>Website under construction</h1>
-        <h2>Come back soon to see something cool!</h2>
+      <ProjectList refs={myProjectsRef} />
+      <div className="main contactMe" ref={contactMeRef}>
+        <div id="contactMeTextContainer">
+          <h1 id="contactMeTitle">Contact me!</h1>
+          <p>
+            If you'd wish to contact me you
+            use this form, which will send me an email, or you can
+            also reach me by sending me an email your self at
+            {' '}
+            <a href="mailto:gonagutor@gmail.com">gonagutor@gmail.com</a>
+          </p>
+          <p>
+            You can also reach me on other platforms but the most efficient way for me is email
+          </p>
+          <p>
+            You should also check out my
+            {' '}
+            <a href="https://github.com/gonagutor">github</a>
+            {' '}
+            by clicking on the button on the top right
+            (bottom of the nav menu if you are on a mobile device)
+          </p>
+        </div>
+        <form id="aboutMeForm">
+          <label className="aboutMeLabel" htmlFor="name">
+            <input className="formInput" id="name" placeholder="Your name" />
+          </label>
+          <label className="aboutMeLabel" htmlFor="email">
+            <input className="formInput" id="email" placeholder="Your email" />
+          </label>
+          <label className="aboutMeLabel" style={{ height: '50%' }} htmlFor="content">
+            <textarea className="formInput big" rows={10} id="content" placeholder="Write me a lovely e-letter!" />
+          </label>
+          <label htmlFor="submitButton" style={{ alignSelf: 'flex-end' }}>
+            <input type="button" id="submitButton" value="Send me the message!" />
+          </label>
+        </form>
       </div>
     </div>
   );

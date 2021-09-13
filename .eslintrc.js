@@ -19,6 +19,9 @@ module.exports = {
     'react',
     '@typescript-eslint',
   ],
+  globals: {
+    JSX: true,
+  },
   rules: {
     'react/jsx-filename-extension': [0, { allow: 'as-needed' }],
     'import/no-unresolved': [0],

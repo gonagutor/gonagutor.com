@@ -1,0 +1,48 @@
+{
+	"projects": [{
+		"title": "DnDmin",
+		"description": "I made this app using Flutter, Express, PHP, SQL and MongoDB.\n This app was created because I was playing dnd and all the options that players had to create their characters using an app were not great, so I decided to make one myself. \nFurthermore I wanted to make a system so players could move their characters in a virtual map inside a custom unity game, but that is still in development.\nThis app took a really long time to make (it is still in development) because this was a complete full stack project, in which I fully implemented authentication, an API, different characters for the same user and a fully implemented DnD database containing everything from the book (this database is not public)",
+		"image": "https://picsum.photos/200/300",
+		"links": [{
+			"icon": "",
+			"text": "",
+			"link": ""
+		}]
+	},{
+		"title": "TikVault",
+		"description": "I made this app using React Native.\n This app was created because I was annoyed that TikTok doesn't let you properly classify the videos you download.\n It let's you organize videos in specific categories so you can easily find them later, and it also downloads them and let's you rename them while keeping the original username and like count.\n I published this app in Google Play and you can download it below",
+		"image": "https://picsum.photos/200/300",
+		"links": [{
+			"icon": "",
+			"text": "",
+			"link": ""
+		}]
+	},{
+		"title": "Telsokit IO",
+		"description": "I made this app using Flutter.\n This app was created for Telsokit S.L.\n It works together with a physical device to play and schedule sound alarms and notices by comunicating over TCP.",
+		"image": "https://picsum.photos/200/300",
+		"links": [{
+			"icon": "",
+			"text": "",
+			"link": ""
+		}]
+	},{
+		"title": "Sparkel",
+		"description": "I made this web app using React, PostgreSQL, Amazon S3 and Express.\n This web app was created to teach a friend programming during summer.\n It is a Instagram-like social media meant for our friends to use and it has messaging, text and image posts and stories. It is still in development ",
+		"image": "https://picsum.photos/200/300",
+		"links": [{
+			"icon": "",
+			"text": "",
+			"link": ""
+		}]
+	},{
+		"title": "This website!",
+		"description": "I made this website using React.\n This serves as my portfolio aswell as something cool to show when someone asks me what I do.",
+		"image": "/images/projects/website.jpg",
+		"links": [{
+			"icon": "",
+			"text": "",
+			"link": ""
+		}]
+	}]
+}

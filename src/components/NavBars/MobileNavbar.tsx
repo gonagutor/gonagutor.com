@@ -101,7 +101,7 @@ const NavButtons = (props: NavButtonProps) => {
             props.callback();
           }}
         >
-          <b>My projects</b>
+          <b>My Projects</b>
         </button>
       </label>
       <label className="navButtonLabel" htmlFor="contactMe">

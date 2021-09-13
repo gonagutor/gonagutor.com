@@ -77,7 +77,7 @@ const NavButtons = (props: DesktopNavbarProps) => {
           id="myProjects"
           onClick={() => (myProjectsRef.current) && myProjectsRef.current.scrollIntoView({ behavior: 'smooth' })}
         >
-          <b>My projects</b>
+          <b>My Projects</b>
         </button>
       </label>
       <label className="navButtonLabel" htmlFor="contactMe">
