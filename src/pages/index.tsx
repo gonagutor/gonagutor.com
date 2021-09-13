@@ -1,8 +1,11 @@
+/* eslint-disable no-alert */
 import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Typewriter, { TypewriterClass } from 'typewriter-effect';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import ReCAPTCHA from 'react-google-recaptcha';
+import EmailJS from 'emailjs-com';
 import MeImage from '../assets/me.png';
 import ArrowSVG from '../components/ArrowSVG';
 import ResponsiveNavbar from '../components/NavBars/ResponsiveNavbar';
@@ -11,6 +14,14 @@ import ProjectList from '../components/ProjectList';
 const IndexPage = () => {
   const [aboutMeClasses, setAboutMeClasses] = useState('aboutMeTextBox');
   const [teachStackClasses, setTeachStackClasses] = useState('techstackTextContainer');
+  const [nameRequired, setNameRequired] = useState(false);
+  const [emailRequired, setEmailRequired] = useState(false);
+  const [textRequired, setTextRequired] = useState(false);
+  const [captchaRequired, setCaptchaRequired] = useState(false);
+  const reCaptchaRef = useRef<ReCAPTCHA>(null);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const textRef = useRef<HTMLTextAreaElement>(null);
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const myTechstackRef = useRef<HTMLDivElement>(null);
@@ -215,19 +226,54 @@ const IndexPage = () => {
             (bottom of the nav menu if you are on a mobile device)
           </p>
         </div>
-        <form id="aboutMeForm">
+        <form
+          id="aboutMeForm"
+          onSubmit={(e) => {
+            e.preventDefault();
+            const isCaptchaFilled = (reCaptchaRef.current?.getValue() == null || reCaptchaRef.current?.getValue() === '');
+            const isNameFilled = (nameRef.current?.value === undefined || nameRef.current.value === '' || nameRef.current.value.length < 1);
+            const isEmailFilled = (emailRef.current?.value === undefined || emailRef.current.value === '' || emailRef.current.value.length < 1);
+            const isTextFilled = (textRef.current?.value === undefined || textRef.current.value === '' || textRef.current.value.length < 1 || textRef.current.value.length > 5000);
+
+            setCaptchaRequired(isCaptchaFilled);
+            setNameRequired(isNameFilled);
+            setEmailRequired(isEmailFilled);
+            setTextRequired(isTextFilled);
+            if (isCaptchaFilled || isNameFilled || isEmailFilled || isTextFilled) return;
+
+            EmailJS.send(
+              process.env.NEXT_PUBLIC_EMAILJS_KEY ?? '',
+              process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? '', {
+                email: emailRef.current?.value,
+                name: nameRef.current?.value,
+                text: textRef.current?.value,
+              },
+            ).then(() => alert('An email was sent to my adress! I will get back to you as soon as I can'))
+              .catch(() => alert('Could not send email, try again later'))
+              .finally(() => { document.location.href = '/'; });
+          }}
+        >
           <label className="aboutMeLabel" htmlFor="name">
-            <input className="formInput" id="name" placeholder="Your name" />
+            <input ref={nameRef} className="formInput" id="name" placeholder="Your name" />
           </label>
+          {(nameRequired) && <span style={{ color: 'var(--accent-1)', margin: '0px 16px' }}>This field is required</span>}
           <label className="aboutMeLabel" htmlFor="email">
-            <input className="formInput" id="email" placeholder="Your email" />
+            <input ref={emailRef} className="formInput" type="email" id="email" placeholder="Your email" />
           </label>
+          {(emailRequired) && <span style={{ color: 'var(--accent-1)', margin: '0px 16px' }}>This field is required</span>}
           <label className="aboutMeLabel" style={{ height: '50%' }} htmlFor="content">
-            <textarea className="formInput big" rows={10} id="content" placeholder="Write me a lovely e-letter!" />
+            <textarea ref={textRef} className="formInput big" rows={10} id="content" placeholder="Write me a lovely e-letter!" />
           </label>
-          <label htmlFor="submitButton" style={{ alignSelf: 'flex-end' }}>
-            <input type="button" id="submitButton" value="Send me the message!" />
-          </label>
+          {(textRequired) && <span style={{ color: 'var(--accent-1)', margin: '0px 16px' }}>This field is required and must not be longer than 5000 characters</span>}
+          <div id="submitRow">
+            <div style={{ margin: '16px 0px' }}>
+              <ReCAPTCHA ref={reCaptchaRef} theme="dark" sitekey="6Le5cmQcAAAAAOJZyK2ieg19Ot6HGo92838hr5pK" />
+              {(captchaRequired) && <span style={{ color: 'var(--accent-1)', margin: '16px 0px' }}>Please complete the captcha</span>}
+            </div>
+            <label htmlFor="submitButton">
+              <input type="submit" id="submitButton" value="Send me the message!" />
+            </label>
+          </div>
         </form>
       </div>
     </div>
