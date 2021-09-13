@@ -97,7 +97,12 @@ const IndexPage = () => {
   return (
     <div>
       <Head>
-        <title>Gonagutor - Developer</title>
+        <title>Gonagutor - Fullstack Developer</title>
+        <meta name="description" content="Hi! I'm Gonzalo a fullstack developer. I love programming and doing cool things. I do front-end for websites, WebApps, apps and back-end" />
+        <meta property="og:title" content="Gonagutor - Fullstack developer" />
+        <meta property="og:url" content="https://www.gonagutor.com" />
+        <meta property="og:description" content="Gonzalo - Fullstack developer" />
+        <meta property="og:image" content="/images/projects/website.jpg" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
