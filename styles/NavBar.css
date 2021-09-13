@@ -1,0 +1,390 @@
+.navBarDesktop {
+  padding: 0px 24px;
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 64px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--black);
+  color: var(--white-text);
+  z-index: 9999;
+  background-image: var(--noise);
+}
+
+.leftTitle {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Vaulto';
+  color: var(--accent-2);
+}
+
+.navBarDesktopIcons {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+.navButton {
+  cursor: pointer;
+  position: relative;
+  transition-property: color, background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: var(--white);
+  background-image: var(--noise);
+  color: var(--black-text);
+  box-shadow: none;
+  border: 0px;
+  height: 64px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bolder;
+  font-family: 'Open Sans', sans-serif;
+  align-items: center;
+}
+
+.navButton.isCurrentPage {
+  background-color: var(--black);
+  color: var(--white-text);
+}
+
+.navButton.isCurrentPage::after {
+  position: absolute;
+  bottom: -1px;
+  content: '000';
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: var(--white);
+  background-image: var(--noise);
+  font-size: 0.75rem;
+  color: transparent;
+}
+
+.aditionalNavButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.aditionalNavButton {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--white-text);
+  box-shadow: none;
+  border-width: 0px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.75rem;
+  align-items: center;
+}
+
+/** HAMBURGUER ICON **/
+
+#nav-icon1,
+#nav-icon2,
+#nav-icon3,
+#nav-icon4 {
+  width: 40px;
+  height: 36px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#nav-icon1 span,
+#nav-icon3 span,
+#nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--accent-1);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 15px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 30px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  z-index: 10;
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  z-index: 10;
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  z-index: 10;
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+/** Full Nav **/
+
+.fullNav {
+  width: 100vw;
+  height: 100vh;
+  transition: width 1s ease-out;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: var(--black);
+  background-image: var(--noise);
+}
+
+.fullNav.inactive {
+  display: none !important;
+  width: 0%;
+  height: 0%;
+}
+
+.navBarMobile {
+  padding: 0px 20px;
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 64px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--black);
+  color: var(--white-text);
+  z-index: 9999;
+  background-image: var(--noise);
+}
+
+.navBarMobile .leftTitle {
+  z-index: 11;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-family: Vaulto;
+  color: var(--accent-2);
+}
+
+.navButtonMobile {
+  cursor: pointer;
+  position: relative;
+  transition-property: color, background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: var(--white);
+  background-image: var(--noise);
+  color: var(--black-text);
+  box-shadow: none;
+  border: 0px;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bolder;
+  font-family: 'Open Sans', sans-serif;
+  align-items: center;
+}
+
+.navButtonMobile.isCurrentPage {
+  background-color: var(--black);
+  color: var(--white-text);
+}
+
+.navButtonMobile.isCurrentPage::after {
+  position: absolute;
+  left: -1px;
+  top: 20px;
+  bottom: 20px;
+  content: '000';
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotate(90deg);
+  background-color: var(--white);
+  background-image: var(--noise);
+  font-size: 0.75rem;
+  color: transparent;
+}
+
+.aditionalNavButtonMobileContainer {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.aditionalNavButtonMobile {
+  z-index: 11;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--white-text);
+  box-shadow: none;
+  border-width: 0px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/** Tablet Nav **/
+
+.navButtonTablet {
+  cursor: pointer;
+  position: relative;
+  transition-property: color, background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: var(--white);
+  background-image: var(--noise);
+  color: var(--black-text);
+  box-shadow: none;
+  border: 0px;
+  height: 64px;
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 1rem;
+  align-items: center;
+  font-size: 32px;
+  font-family: 'Icon-Works';
+}
+
+.navButtonTablet.isCurrentPage {
+  background-color: var(--black);
+  color: var(--white-text);
+}
+
+.navButtonTablet.isCurrentPage::after {
+  position: absolute;
+  bottom: -1px;
+  font-family: 'Open Sans', sans-serif;
+  content: '000';
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: var(--white);
+  background-image: var(--noise);
+  font-size: 0.75rem;
+  color: transparent;
+}
+
+.controllerButton {
+  cursor: pointer;
+  position: relative;
+  background-color: var(--white);
+  background-image: var(--noise);
+  color: var(--black-text);
+  box-shadow: none;
+  border: 0px;
+  height: 64px;
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 1rem;
+  align-items: center;
+  font-size: 32px;
+  font-family: 'Icon-Works';
+}
+
+.aditionalNavButtonTabletContainer {
+  transition: transform 0.2s ease-in-out;
+  position: fixed;
+  margin-top: 20px;
+  height: 168px;
+  width: 56px;
+  right: 24px;
+  top: 64px;
+  border: 4px solid var(--black-text);
+  transform: scaleY(0);
+  transform-origin: top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  background-image: var(--noise);
+}
+
+.aditionalNavButtonTabletContainer.active {
+  position: fixed;
+  margin-top: 20px;
+  height: 168px;
+  width: 56px;
+  right: 24px;
+  top: 64px;
+  border: 4px solid var(--black-text);
+  transform: scaleY(1);
+  display: flex;
+}
+
+.aditionalNavButtonTablet {
+  z-index: 11;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--black-text);
+  box-shadow: none;
+  border-width: 0px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/** My Projects **/
+.main.myProjects {
+  flex-direction: column;
+}
