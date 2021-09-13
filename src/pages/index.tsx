@@ -99,7 +99,7 @@ const IndexPage = () => {
       <Head>
         <title>Gonagutor - Fullstack Developer</title>
         <meta name="description" content="Hi! I'm Gonzalo a fullstack developer. I love programming and doing cool things. I do front-end for websites, WebApps, apps and back-end" />
-        <meta property="og:title" content="Gonagutor - Fullstack developer" />
+        <meta property="og:title" content="Hi! I'm Gonzalo a fullstack developer. And I love cool projects" />
         <meta property="og:url" content="https://www.gonagutor.com" />
         <meta property="og:description" content="Gonzalo - Fullstack developer" />
         <meta property="og:image" content="/images/projects/website.jpg" />
