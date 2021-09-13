@@ -11,7 +11,7 @@
 	},{
 		"title": "TikVault",
 		"description": "I made this app using React Native.\n This app was created because I was annoyed that TikTok doesn't let you properly classify the videos you download.\n It let's you organize videos in specific categories so you can easily find them later, and it also downloads them and let's you rename them while keeping the original username and like count.\n I published this app in Google Play and you can download it below",
-		"image": "https://picsum.photos/200/300",
+		"image": "/images/projects/tikvault.png",
 		"links": [{
 			"icon": "",
 			"text": "",
@@ -20,7 +20,7 @@
 	},{
 		"title": "Telsokit IO",
 		"description": "I made this app using Flutter.\n This app was created for Telsokit S.L.\n It works together with a physical device to play and schedule sound alarms and notices by comunicating over TCP.",
-		"image": "https://picsum.photos/200/300",
+		"image": "/images/projects/telsokitapp.png",
 		"links": [{
 			"icon": "",
 			"text": "",
@@ -29,7 +29,7 @@
 	},{
 		"title": "Sparkel",
 		"description": "I made this web app using React, PostgreSQL, Amazon S3 and Express.\n This web app was created to teach a friend programming during summer.\n It is a Instagram-like social media meant for our friends to use and it has messaging, text and image posts and stories. It is still in development ",
-		"image": "https://picsum.photos/200/300",
+		"image": "/images/projects/sparkel.png",
 		"links": [{
 			"icon": "",
 			"text": "",
@@ -37,7 +37,7 @@
 		}]
 	},{
 		"title": "This website!",
-		"description": "I made this website using React.\n This serves as my portfolio aswell as something cool to show when someone asks me what I do.",
+		"description": "I made this website using React and Next.js (hosted by vercel).\n This serves as my portfolio aswell as something cool to show when someone asks me what I do.",
 		"image": "/images/projects/website.jpg",
 		"links": [{
 			"icon": "",
