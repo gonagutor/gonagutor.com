@@ -249,6 +249,7 @@ const IndexPage = () => {
             EmailJS.send(
               process.env.NEXT_PUBLIC_EMAILJS_KEY ?? '',
               process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? '', {
+                'g-recaptch-response': reCaptchaRef.current.getValue(),
                 email: emailRef.current?.value,
                 name: nameRef.current?.value,
                 text: textRef.current?.value,
