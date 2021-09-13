@@ -1,3 +1,3 @@
 # https://gonagutor.com
 
-This is the repository from my personal website & portfolio
+This is the repository of my personal website & portfolio
