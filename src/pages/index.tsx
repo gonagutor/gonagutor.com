@@ -184,7 +184,7 @@ const IndexPage = () => {
             <p>JavaScript, TypeScript, Dart, CSS, HTML, PHP, SQL, C, C#, Java & Python</p>
             <h4>Frameworks I know:</h4>
             <p>Vue, React, Angular, Express, Symphony & Flutter</p>
-            <h4>Other useful thinks I know:</h4>
+            <h4>Other useful things I know:</h4>
             <p>
               Git, MongoDB, PostgreSQL, Apache, Nginx, Node.js,
               VSCode, Figma, SASS, REST, Docker, ES6 & ES5

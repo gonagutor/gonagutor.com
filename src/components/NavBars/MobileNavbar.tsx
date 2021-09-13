@@ -33,7 +33,7 @@ const NavButtons = (props: NavButtonProps) => {
   const shouldBeActive = (ref : React.RefObject<HTMLDivElement>) => {
     if (!ref.current) return false;
     const { y, height } = ref.current.getBoundingClientRect();
-    if (y - (height / 2) < 0 && Math.abs(y) < height / 2) { return true; }
+    if (y - ((height - y) / 2) < 0 && Math.abs(y) < height / 2) { return true; }
     return false;
   };
 
