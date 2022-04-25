@@ -1,5 +1,5 @@
 import React, { RefObject } from 'react';
-import Data from '../assets/projects.json';
+import Data from '../assets/data/projects.json';
 
 interface ProjectListProps {
   refs: RefObject<HTMLDivElement>

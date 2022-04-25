@@ -1,6 +1,6 @@
 import React from 'react';
 import Typewriter, { TypewriterClass } from 'typewriter-effect';
-import stack from '../assets/techstack.json';
+import stack from '../assets/data/techstack.json';
 
 const TypewriterStack = () => {
   const loopingTypewriter = (ref: TypewriterClass) => {

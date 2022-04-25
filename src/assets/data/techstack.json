@@ -1,0 +1,16 @@
+{
+  "Front-end": ["HTML", "CSS", "SCSS", "React", "Vue", "Angular"],
+  "Back-end": [
+    "SQL",
+    "MongoDB",
+    "GraphQL",
+    "Firebase",
+    "S3 Buckets",
+    "Express",
+    "Fastify",
+    "Apache",
+    "Docker",
+    "PHP"
+  ],
+  "App dev": ["Flutter", "React native", "Java native"]
+}
