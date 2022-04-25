@@ -6,7 +6,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import ReCAPTCHA from 'react-google-recaptcha';
 import EmailJS from 'emailjs-com';
 import MeImage from '../assets/me.png';
-import ArrowSVG from '../components/ArrowSVG';
+import ArrowSVG from '../assets/SVGs/ArrowSVG';
 import ResponsiveNavbar from '../components/NavBars/ResponsiveNavbar';
 import ProjectList from '../components/ProjectList';
 import TypewriterStack from '../components/TypewriterStack';
