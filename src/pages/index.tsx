@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Typewriter, { TypewriterClass } from 'typewriter-effect';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import ReCAPTCHA from 'react-google-recaptcha';
 import EmailJS from 'emailjs-com';
@@ -10,6 +9,7 @@ import MeImage from '../assets/me.png';
 import ArrowSVG from '../components/ArrowSVG';
 import ResponsiveNavbar from '../components/NavBars/ResponsiveNavbar';
 import ProjectList from '../components/ProjectList';
+import TypewriterStack from '../components/TypewriterStack';
 
 const IndexPage = () => {
   const [aboutMeClasses, setAboutMeClasses] = useState('aboutMeTextBox');
@@ -39,61 +39,6 @@ const IndexPage = () => {
     };
   });
 
-  const loopingTypewriter = (ref: TypewriterClass) => {
-    ref.pauseFor(500)
-      .typeString('Front-end')
-      .pauseFor(500)
-      .typeString(' (HTML)')
-      .pauseFor(500)
-      .deleteChars(7)
-      .typeString(' (CSS)')
-      .pauseFor(500)
-      .deleteChars(6)
-      .typeString(' (React)')
-      .pauseFor(500)
-      .deleteChars(8)
-      .typeString(' (Vue)')
-      .pauseFor(500)
-      .deleteChars(6)
-      .typeString(' (SCSS)')
-      .pauseFor(500)
-      .deleteChars(7)
-      .typeString(' (Angular)')
-      .pauseFor(500)
-      .deleteAll()
-      .pauseFor(500)
-      .typeString('Back-end')
-      .pauseFor(500)
-      .typeString(' (SQL)')
-      .pauseFor(500)
-      .deleteChars(6)
-      .typeString(' (Firebase)')
-      .pauseFor(500)
-      .deleteChars(11)
-      .typeString(' (MongoDB)')
-      .pauseFor(500)
-      .deleteChars(10)
-      .typeString(' (Express)')
-      .pauseFor(500)
-      .deleteChars(10)
-      .typeString(' (Apache)')
-      .pauseFor(500)
-      .deleteChars(9)
-      .typeString(' (PHP)')
-      .pauseFor(500)
-      .deleteAll()
-      .pauseFor(500)
-      .typeString('App dev')
-      .pauseFor(500)
-      .typeString(' (Flutter)')
-      .pauseFor(500)
-      .deleteChars(10)
-      .typeString(' (Java Native)')
-      .pauseFor(500)
-      .deleteAll()
-      .start();
-  };
-
   return (
     <div>
       <Head>
@@ -121,12 +66,7 @@ const IndexPage = () => {
           <h1 className="welcomeText bold">I'm Gonzalo</h1>
           <h1 className="welcomeText bold">I'm a developer</h1>
           <p className="welcomeText thin">I love programming and doing cool things</p>
-          <Typewriter
-            options={{
-              wrapperClassName: 'typewriter', cursorClassName: 'typewriterCursor', cursor: '▌', loop: true,
-            }}
-            onInit={(ref) => loopingTypewriter(ref)}
-          />
+          <TypewriterStack />
         </div>
         <div id="personalPictureContainerContainer">
           <div id="personalPictureContainer">
