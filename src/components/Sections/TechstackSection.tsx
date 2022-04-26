@@ -6,7 +6,7 @@ type TechstackSectionProps = {
 }
 
 const TechstackSection = (props: TechstackSectionProps) => {
-  const { t } = useTranslation('techstack');
+  const { t } : { t: any} = useTranslation('techstack');
   const [teachStackClasses, setTeachStackClasses] = useState('techstackTextContainer');
   const { refs } = props;
 

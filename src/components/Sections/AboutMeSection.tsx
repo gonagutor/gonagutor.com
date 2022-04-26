@@ -6,7 +6,7 @@ type AboutMeSectionProps = {
 }
 
 const AboutMeSection = (props: AboutMeSectionProps) => {
-  const { t } = useTranslation('aboutMe');
+  const { t } : { t: any} = useTranslation('aboutMe');
   const [aboutMeClasses, setAboutMeClasses] = useState('aboutMeTextBox');
   const { refs } = props;
 

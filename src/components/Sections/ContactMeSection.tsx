@@ -8,7 +8,7 @@ type ContactMeSectionProps = {
 }
 
 const ContactMeSection = (props: ContactMeSectionProps) => {
-  const { t } = useTranslation('contactMe');
+  const { t } : { t: any} = useTranslation('contactMe');
   const [nameRequired, setNameRequired] = useState(false);
   const [emailRequired, setEmailRequired] = useState(false);
   const [textRequired, setTextRequired] = useState(false);

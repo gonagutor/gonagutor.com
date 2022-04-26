@@ -3,7 +3,7 @@ import Head from 'next/head';
 import React from 'react';
 
 const CustomHead = () => {
-  const { t } = useTranslation('head');
+  const { t } : { t: any} = useTranslation('head');
 
   return (
     <Head>

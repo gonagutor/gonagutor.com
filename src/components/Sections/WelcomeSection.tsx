@@ -12,7 +12,7 @@ type WelcomeSectionProps = {
 }
 
 const WelcomeSection = (props: WelcomeSectionProps) => {
-  const { t } = useTranslation('welcome');
+  const { t } : { t: any} = useTranslation('welcome');
   const { refs, onArrowClick } = props;
 
   return (
