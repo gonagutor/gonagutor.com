@@ -1,5 +1,5 @@
 import React, { RefObject } from 'react';
-import Data from '../assets/data/projects.json';
+import i18n from '../../i18next.config';
 
 interface ProjectListProps {
   refs: RefObject<HTMLDivElement>
@@ -8,6 +8,7 @@ interface ProjectListProps {
 const ProjectList = (props: ProjectListProps) => {
   const { refs } = props;
   const projects: Array<JSX.Element> = [];
+  const Data: any = i18n.getDataByLanguage(i18n.language);
   const sliceNewLines = (text: String) => {
     const paragraphs: Array<JSX.Element> = [];
     let i = 0;

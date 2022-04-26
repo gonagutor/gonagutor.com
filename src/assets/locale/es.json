@@ -35,6 +35,68 @@
     "otherUsefulThingsIKnow": "Otras cosas útiles que se usar:",
     "otherUsefulThingsList": "Git, MongoDB, PostgreSQL, GraphQL, Apache, Nginx, Node.js, VSCode, Figma, SASS, REST, Docker, ES6 & ES5"
   },
+  "projects": [
+    {
+      "title": "DnDmin",
+      "description": "Hice esta app usando Flutter, Express, PHP, SQL y MongoDB.\n Hice esta app porque estaba DnD y las opciones para crear tu personaje usando una app no eran ideals, así que decidí hacer una yo mismo. \nAdemás quería crear un sistema que permitiese a mis jugadores moverse en un mapa virtual personalizado hecho con unity (Socket.JS como servidor), pero todavía estoy desarrollando esto.\nMe llevó muchisimo tiempo hacer esta app (todavía está en desarrollo) por que es un proyecto full stack completo, en el que implementé una autentificación con roles, una API, diferentes personajes para un solo usuario, y una base de datos completa de DnD que contiene todo lo que tiene el libro (esta base de datos no es publica por razones legales)",
+      "image": "/images/projects/dndmin.png",
+      "links": [
+        {
+          "icon": "",
+          "text": "",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "title": "TikVault",
+      "description": "Hice esta app usando React Native.\n Hice esta app por que tiktok no te dejaba clasificar los videos que te gustaban o que te descargabas, y acababa con mil videos de cocina que hacian imposible buscar una receta completa.\n Te deja organizar los videos por categorías, además los descarga y te deja renombrarlos manteniendo el usuario original, likes y descripción.\n Es una app complicada de mantener ya que requiso ingeniería inversa de como funciona el sistema de descargas de TikTok, lo que cambia amenudo. Además, TikTok añadió algo parecido hace poco tiempo\n Publiqué esta app en Google Play y puedes descargarla debajo",
+      "image": "/images/projects/tikvault.png",
+      "links": [
+        {
+          "icon": "",
+          "text": "",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "title": "Telsokit IO",
+      "description": "Hice esta app usando Flutter.\n Esta app fue creada para Telsokit S.L.\n Funciona junto con un dispositivo fiscio para programar alertas y reproducir mensajes de voz por megafonía, comunicandose mediante TCP.",
+      "image": "/images/projects/telsokitapp.png",
+      "links": [
+        {
+          "icon": "",
+          "text": "",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "title": "Sparkel",
+      "description": "Hice esta webapp, junto con una amiga, con React, PostgreSQL, Amazon S3 and Express.\n Esta web se hizo con la intención de enseñar a una amiga a programar durante el verano.\n Es un 'clon' Instagram diseñado para que fuese una red social privada para nuestro grupo de amigos. Tiene mensajería instantanea, posts de imagenes y texto e historias. Todavía está en desarrollo",
+      "image": "/images/projects/sparkel.png",
+      "links": [
+        {
+          "icon": "",
+          "text": "",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "title": "¡Esta web!",
+      "description": "Hice esta web usando React y Next.js (hostedo por Vercel).\nEstá disponible en Español y en Inglés\n Sirve como mi portfolio, a la vez que algo guay que enseñar cuando alguien me pregunta que hago.",
+      "image": "/images/projects/website.jpg",
+      "links": [
+        {
+          "icon": "",
+          "text": "",
+          "link": ""
+        }
+      ]
+    }
+  ],
   "contactMe": {
     "contactMe": "¡Contacta conmigo!",
     "contactMeDescription": "Se te gustaría contactar conmigo, puedes usar este formulario, que me enviará un email, o puedes contactar conmigo mandandome un correo directamente a",
