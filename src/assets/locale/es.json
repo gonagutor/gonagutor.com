@@ -1,0 +1,56 @@
+{
+  "head": {
+    "title": "Gonagutor - Desarrollador Fullstack",
+    "description": "¡Hola! Soy Gonzalo, un desarrollador fullstack. Me encanta programar y hacer cosas guays. Hago front-end, webs, WebApps, apps y back-end",
+    "shortDescription": "¡Hola! Soy Gonzalo, un desarrollador fullstack. Me encantan los proyectos guays",
+    "shorterDescription": "Gonzalo - Desarrollador Fullstack",
+    "url": "https://www.gonagutor.com",
+    "previewImage": "/images/projects/website.jpg"
+  },
+  "welcome": {
+    "hi": "Hola!",
+    "presentation": "Soy Gonzalo",
+    "whatIDo": "Un desarrollador",
+    "whatILike": "Me encanta programar y hacer cosas guays",
+    "thatsMe": "¡Soy yo!",
+    "theresMore": "¡Hay mas!"
+  },
+  "aboutMe": {
+    "aboutMe": "Sobre mi",
+    "fstParagraph": "Soy un desarrollador con pasión por todo lo relacionado con la programación.",
+    "sndParagraph": "Me encantan los proyectos grandes con un montón de partes móviles. Prefiero cosas que incluyen Front-End ya que hacer UI bonitas es algo que me encanta, pero también me encanta el Back-End. También me encanta diseñar cosas utiles y bonitas.",
+    "thrParagraphBeforeLink": "Aunque mis proyectos favoritos son los que satisfacen mi propia curiosidad, o cosas que hago para disfrutar con mis amigos, también estudio en",
+    "thrParagraphAfterLink": "donde aprendo cosas como C, cosas de servidores y mucho mas.",
+    "fthParagraph": "Vivo en España, Madrid para ser exactos. Aparte de programar me encantan los videojuegos, la ciencia ficción (peliculas y libros) y jugar a Dungeons and Dragons."
+  },
+  "techstack": {
+    "myTechstack": "Mi Techstack",
+    "approach": "Mi acercamiento a un proyecto normalmente es investigar que tecnología o arquitectura es la mejor para la situación.",
+    "approachComment": "No me suele importar si he usado el framework, lenguaje, o arquitectura antes.",
+    "benefits": "Por esto, he usado muchas tecnologías actuales, y por que siempre hago proyectos grandes completos soy muy proficiente con ellos.",
+    "languagesIUse": "Lenguajes que uso:",
+    "languagesList": "JavaScript, TypeScript, Dart, CSS, HTML, PHP, SQL, C, C#, Java & Python",
+    "frameworksIKnow": "Frameworks que uso:",
+    "frameworksList": "Vue, React, Angular, Express, Symphony & Flutter",
+    "otherUsefulThingsIKnow": "Otras cosas útiles que se usar:",
+    "otherUsefulThingsList": "Git, MongoDB, PostgreSQL, GraphQL, Apache, Nginx, Node.js, VSCode, Figma, SASS, REST, Docker, ES6 & ES5"
+  },
+  "contactMe": {
+    "contactMe": "¡Contacta conmigo!",
+    "contactMeDescription": "Se te gustaría contactar conmigo, puedes usar este formulario, que me enviará un email, o puedes contactar conmigo mandandome un correo directamente a",
+    "preferedContactMethod": "Puedes contactar conmigo en otras plataformas, como LinkedIn, pero para mi la manera mas eficiente es email",
+    "checkoutMyGithubPreLink": "Echale también un ojo a mi",
+    "checkoutMyGithubPostLink": "haciendo click en el botón de la barra de navegación a la derecha (parte de abajo del menú de navegación si estás en móvil) o haz click en el texto en negrita de mas atrás",
+    "form": {
+      "placeholders": {
+        "name": "Tu nombre",
+        "email": "Tu correo electronico",
+        "text": "¡Escríbeme una bonita carta!"
+      },
+      "required": "Este campo es necesario",
+      "noLongerThan": "y no debe contener mas de 5000 carácteres",
+      "pleaseCompleteTheCaptcha": "Por favor, completa el captcha",
+      "send": "¡Enviar el mensaje!"
+    }
+  }
+}

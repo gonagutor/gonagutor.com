@@ -1,0 +1,56 @@
+{
+  "head": {
+    "title": "Gonagutor - Fullstack Developer",
+    "description": "Hi! I'm Gonzalo, a fullstack developer. I love programming and doing cool things. I do front-end for websites, WebApps, apps and back-end",
+    "shortDescription": "Hi! I'm Gonzalo a fullstack developer. And I love cool projects",
+    "shorterDescription": "Gonzalo - Fullstack developer",
+    "url": "https://www.gonagutor.com",
+    "previewImage": "/images/projects/website.jpg"
+  },
+  "welcome": {
+    "hi": "Hi!",
+    "presentation": "I'm Gonzalo",
+    "whatIDo": "I'm a developer",
+    "whatILike": "I love programming and doing cool things",
+    "thatsMe": "That's me!",
+    "theresMore": "There's more!"
+  },
+  "aboutMe": {
+    "aboutMe": "About Me",
+    "fstParagraph": "I'm a developer with a passion for anything related to programming.",
+    "sndParagraph": "I love big projects with lots of moving parts. I prefer things that include Front-End since making UI that looks good is something I like, but I also love doing Back-End. I also love designing things that look cool.",
+    "thrParagraphBeforeLink": "While I make most of my projects to satisfy my own curiosity, or make things for me and my friends to enjoy, I am also a student at",
+    "thrParagraphAfterLink": "where I am learning things like C, server stuff, and lots more things.",
+    "fthParagraph": "I live in Spain, Madrid to be exact. Apart from programming I love games, Sci-Fi (Movies and books) and playing Dungeons And Dragons."
+  },
+  "techstack": {
+    "myTechstack": "My Techstack",
+    "approach": "My approach for a project usually is to research which technology is best for the situation.",
+    "approachComment": "I mostly do not care whether I have used the framework, languages, or server architecture before.",
+    "benefits": "Because of this I have used a lot of current technologies, and because I always do big complete projects I am also very proficient with them.",
+    "languagesIUse": "Languages I use:",
+    "languagesList": "JavaScript, TypeScript, Dart, CSS, HTML, PHP, SQL, C, C#, Java & Python",
+    "frameworksIKnow": "Frameworks I know:",
+    "frameworksList": "Vue, React, Angular, Express, Symphony & Flutter",
+    "otherUsefulThingsIKnow": "Other useful things I know:",
+    "otherUsefulThingsList": "Git, MongoDB, PostgreSQL, GraphQL, Apache, Nginx, Node.js, VSCode, Figma, SASS, REST, Docker, ES6 & ES5"
+  },
+  "contactMe": {
+    "contactMe": "Contact me!",
+    "contactMeDescription": "If you'd wish to contact me you use this form, which will send me an email, or you can also reach me by sending me an email your self at",
+    "preferedContactMethod": "You can also reach me on other platforms but the most efficient way for me is email",
+    "checkoutMyGithubPreLink": "You should also check out my",
+    "checkoutMyGithubPostLink": "by clicking on the button on the top right (bottom of the nav menu if you are on a mobile device)",
+    "form": {
+      "placeholders": {
+        "name": "Your name",
+        "email": "Your email",
+        "text": "Write me a lovely e-letter!"
+      },
+      "required": "This field is required",
+      "noLongerThan": "and must not be longer than 5000 characters",
+      "pleaseCompleteTheCaptcha": "Please complete the captcha",
+      "send": "Send the message!"
+    }
+  }
+}
