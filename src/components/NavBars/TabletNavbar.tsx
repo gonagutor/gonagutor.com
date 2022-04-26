@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons';
+import LanguageSwitcher from './LanguageSwitcher';
 
 interface TabletNavbarProps {
   homeRef: React.RefObject<HTMLDivElement>,
@@ -147,6 +148,7 @@ const TabletNavbar = (props: TabletNavbarProps) => {
         myProjectsRef={myProjectsRef}
         contactMeRef={contactMeRef}
       />
+      <LanguageSwitcher />
       <ExternalLinks />
     </div>
   );

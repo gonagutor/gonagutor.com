@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons';
 import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 interface DesktopNavbarProps {
   homeRef: React.RefObject<HTMLDivElement>,
@@ -137,6 +138,7 @@ const DesktopNavbar = (props: DesktopNavbarProps) => {
         myProjectsRef={myProjectsRef}
         contactMeRef={contactMeRef}
       />
+      <LanguageSwitcher />
       <ExternalLinks />
     </div>
   );

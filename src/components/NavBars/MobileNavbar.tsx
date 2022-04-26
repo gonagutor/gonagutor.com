@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons';
 import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 interface NavButtonProps {
   callback: () => void,
@@ -180,6 +181,7 @@ const MobileNavbar = (props: MobileNavbarProps) => {
           contactMeRef={contactMeRef}
           callback={() => setHamOpen(!hamOpen)}
         />
+        <LanguageSwitcher />
         <ExternalLinks />
       </div>
     </div>
