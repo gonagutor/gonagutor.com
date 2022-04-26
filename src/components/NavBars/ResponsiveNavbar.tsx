@@ -12,12 +12,6 @@ interface DynamicNavbarProps {
 }
 
 const ResponsiveNavbar = (props: DynamicNavbarProps) => {
-  const navIndex = () => {
-    if (typeof window === 'undefined') return (2);
-    if (window.innerWidth <= 640) return (2);
-    if (window.innerWidth < 1220) return (1);
-    return (0);
-  };
   const [shouldReturn, setShouldReturn] = useState(0);
   const {
     homeRef,
@@ -26,6 +20,13 @@ const ResponsiveNavbar = (props: DynamicNavbarProps) => {
     myProjectsRef,
     contactMeRef,
   } = props;
+
+  const navIndex = () => {
+    if (typeof window === 'undefined') return (2);
+    if (window.innerWidth <= 640) return (2);
+    if (window.innerWidth < 1220) return (1);
+    return (0);
+  };
 
   useEffect(() => {
     const setActiveNavBar = () => setShouldReturn(navIndex());

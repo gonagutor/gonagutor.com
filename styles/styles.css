@@ -171,7 +171,7 @@ p a {
 }
 
 .welcomeText.bold {
-  font-size: max(5vw, 2.5rem);
+  font-size: max(4vw, 2.3rem);
 }
 
 .welcomeText.thin {
