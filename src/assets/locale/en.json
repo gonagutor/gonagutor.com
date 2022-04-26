@@ -1,4 +1,11 @@
 {
+  "navbar": {
+    "home": "Home",
+    "aboutMe": "About Me",
+    "myTechstack": "My Techstack",
+    "myProjects": "My Projects",
+    "contactMe": "Contact Me"
+  },
   "head": {
     "title": "Gonagutor - Fullstack Developer",
     "description": "Hi! I'm Gonzalo, a fullstack developer. I love programming and doing cool things. I do front-end for websites, WebApps, apps and back-end",

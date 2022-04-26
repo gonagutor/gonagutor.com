@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 interface NavButtonProps {
   callback: () => void,
@@ -28,6 +29,7 @@ const NavButtons = (props: NavButtonProps) => {
     myProjectsRef,
     contactMeRef,
   } = props;
+  const { t }: {t: any} = useTranslation('navbar');
   const setScrollY = useState(0)[1];
   const setScrollState = () => setScrollY(window.scrollY);
   const shouldBeActive = (ref : React.RefObject<HTMLDivElement>) => {
@@ -62,7 +64,7 @@ const NavButtons = (props: NavButtonProps) => {
             props.callback();
           }}
         >
-          <b>Home</b>
+          <b>{t('home')}</b>
         </button>
       </label>
       <label className="navButtonLabel" htmlFor="aboutMe">
@@ -75,7 +77,7 @@ const NavButtons = (props: NavButtonProps) => {
             props.callback();
           }}
         >
-          <b>About Me</b>
+          <b>{t('aboutMe')}</b>
         </button>
       </label>
       <label className="navButtonLabel" htmlFor="myTechstack">
@@ -88,7 +90,7 @@ const NavButtons = (props: NavButtonProps) => {
             props.callback();
           }}
         >
-          <b>My Techstack</b>
+          <b>{t('myTechstack')}</b>
         </button>
       </label>
       <label className="navButtonLabel" htmlFor="myProjects">
@@ -101,7 +103,7 @@ const NavButtons = (props: NavButtonProps) => {
             props.callback();
           }}
         >
-          <b>My Projects</b>
+          <b>{t('myProjects')}</b>
         </button>
       </label>
       <label className="navButtonLabel" htmlFor="contactMe">
@@ -114,7 +116,7 @@ const NavButtons = (props: NavButtonProps) => {
             props.callback();
           }}
         >
-          <b>Contact Me</b>
+          <b>{t('contactMe')}</b>
         </button>
       </label>
     </div>

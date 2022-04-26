@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 interface DesktopNavbarProps {
   homeRef: React.RefObject<HTMLDivElement>,
@@ -19,6 +20,7 @@ const NavButtons = (props: DesktopNavbarProps) => {
     myProjectsRef,
     contactMeRef,
   } = props;
+  const { t }: {t: any} = useTranslation('navbar');
   const setScrollY = useState(0)[1];
   const setScrollState = () => setScrollY(window.scrollY);
   const shouldBeActive = (ref : React.RefObject<HTMLDivElement>) => {
@@ -47,7 +49,7 @@ const NavButtons = (props: DesktopNavbarProps) => {
           id="home"
           onClick={() => (homeRef.current) && homeRef.current.scrollIntoView({ behavior: 'smooth' })}
         >
-          <b>Home</b>
+          <b>{t('home')}</b>
         </button>
       </label>
       <label className="navButtonLabel" htmlFor="aboutMe">
@@ -57,7 +59,7 @@ const NavButtons = (props: DesktopNavbarProps) => {
           id="aboutMe"
           onClick={() => (aboutMeRef.current) && aboutMeRef.current.scrollIntoView({ behavior: 'smooth' })}
         >
-          <b>About Me</b>
+          <b>{t('aboutMe')}</b>
         </button>
       </label>
       <label className="navButtonLabel" htmlFor="myTechstack">
@@ -67,17 +69,17 @@ const NavButtons = (props: DesktopNavbarProps) => {
           id="myTechstack"
           onClick={() => (myTechstackRef.current) && myTechstackRef.current.scrollIntoView({ behavior: 'smooth' })}
         >
-          <b>My Techstack</b>
+          <b>{t('myTechstack')}</b>
         </button>
       </label>
-      <label className="navButtonLabel" htmlFor="contactMe">
+      <label className="navButtonLabel" htmlFor="myProjects">
         <button
           type="button"
           className={`navButton${(shouldBeActive(myProjectsRef)) ? ' isCurrentPage' : ''}`}
           id="myProjects"
           onClick={() => (myProjectsRef.current) && myProjectsRef.current.scrollIntoView({ behavior: 'smooth' })}
         >
-          <b>My Projects</b>
+          <b>{t('myProjects')}</b>
         </button>
       </label>
       <label className="navButtonLabel" htmlFor="contactMe">
@@ -87,7 +89,7 @@ const NavButtons = (props: DesktopNavbarProps) => {
           id="contactMe"
           onClick={() => (contactMeRef.current) && contactMeRef.current.scrollIntoView({ behavior: 'smooth' })}
         >
-          <b>Contact Me</b>
+          <b>{t('contactMe')}</b>
         </button>
       </label>
     </div>
