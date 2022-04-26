@@ -38,7 +38,7 @@
   "projects": [
     {
       "title": "DnDmin",
-      "description": "Hice esta app usando Flutter, Express, PHP, SQL y MongoDB.\n Hice esta app porque estaba DnD y las opciones para crear tu personaje usando una app no eran ideals, así que decidí hacer una yo mismo. \nAdemás quería crear un sistema que permitiese a mis jugadores moverse en un mapa virtual personalizado hecho con unity (Socket.JS como servidor), pero todavía estoy desarrollando esto.\nMe llevó muchisimo tiempo hacer esta app (todavía está en desarrollo) por que es un proyecto full stack completo, en el que implementé una autentificación con roles, una API, diferentes personajes para un solo usuario, y una base de datos completa de DnD que contiene todo lo que tiene el libro (esta base de datos no es publica por razones legales)",
+      "description": "Hice esta app usando Flutter, Express, PHP, SQL y MongoDB.\n Hice esta app porque estaba jugando DnD y las opciones para crear tu personaje usando una app no eran ideales, así que decidí hacer una yo mismo. \nAdemás quería crear un sistema que permitiese a mis jugadores moverse en un mapa virtual personalizado hecho con unity (Socket.JS como servidor), pero todavía estoy desarrollando esto.\nMe llevó muchisimo tiempo hacer esta app (todavía está en desarrollo) por que es un proyecto full stack completo, en el que implementé una autentificación con roles, una API, diferentes personajes para un solo usuario, y una base de datos completa de DnD que contiene todo lo que tiene el libro (esta base de datos no es publica por razones legales)",
       "image": "/images/projects/dndmin.png",
       "links": [
         {
@@ -62,7 +62,7 @@
     },
     {
       "title": "Telsokit IO",
-      "description": "Hice esta app usando Flutter.\n Esta app fue creada para Telsokit S.L.\n Funciona junto con un dispositivo fiscio para programar alertas y reproducir mensajes de voz por megafonía, comunicandose mediante TCP.",
+      "description": "Hice esta app usando Flutter.\n Esta app fue creada para Telsokit S.L.\n Funciona junto con un dispositivo físico para programar alertas y reproducir mensajes de voz por megafonía, comunicandose mediante TCP.",
       "image": "/images/projects/telsokitapp.png",
       "links": [
         {
